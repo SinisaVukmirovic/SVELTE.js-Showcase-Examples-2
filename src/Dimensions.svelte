@@ -15,18 +15,13 @@
 	div {
         display: inline-block;
         overflow: hidden;
-        width: 100%;
+        max-width: 100%;
     }
 </style>
 
 <p>Current Logo Size: {w}px &times; {h}px</p>
 
 <input type="range" bind:value={size} min="10" max="100">
-
-<!-- <p>Size: {w}px &times; {h}px</p>
-
-<img style="height: {size * 2}px;" src="./img/svelte-logo-horizontal.svg" alt="Svelte Logo"> -->
-
 
 <div bind:clientWidth={w} bind:clientHeight={h}>
 	<img style="height: {size * 2}px;" src="./img/svelte-logo-horizontal.svg" alt="Svelte Logo">
